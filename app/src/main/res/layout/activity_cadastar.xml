@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="i_home.studio.com.i_home.CadastarActivity">
+
+    <TextView
+        android:id="@+id/tv_Email_Cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/tv_Senha_Cadastro"
+        android:layout_alignTop="@+id/et_email_Cadastro"
+        android:layout_weight="0.63"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/et_SenhaLogin"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_Senha"
+        app:layout_constraintRight_toRightOf="@+id/tv_Senha"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/et_email_Cadastro"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="false"
+        app:layout_constraintBottom_toTopOf="@+id/et_SenhaLogin"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <TextView
+        android:id="@+id/tv_Senha_Cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/Senha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/et_SenhaLogin"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="11dp"
+        android:layout_alignTop="@+id/et_Senha_Cadastro"
+        android:layout_toStartOf="@+id/et_Senha_Cadastro" />
+
+    <EditText
+        android:id="@+id/et_Senha_Cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/et_email_Cadastro"
+        android:layout_below="@+id/et_email_Cadastro"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_Senha"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <Button
+        android:id="@+id/bt_Cadastro"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_Senha_Cadastro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:text="@string/Cadastrar"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "824894921564",
+    "firebase_url": "https://i-home-e102b.firebaseio.com",
+    "project_id": "i-home-e102b",
+    "storage_bucket": "i-home-e102b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824894921564:android:907cbedfaeda9b21",
+        "android_client_info": {
+          "package_name": "i_home.studio.com.i_home"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824894921564-k4ndmna5g6cmr1hg5ag37e6oe1anhg1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv5kFkBnnTqQ1ZaR7MOO1VliB048R1wYM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

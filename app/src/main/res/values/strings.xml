@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">I - Home</string>
+    <string name="title_home">I-Home                                      Sua casa inteligente em suas mãos.</string>
+    <string name="Login">Login</string>
+    <string name="cadastro">Quero me cadastrar</string>
+    <string name="Senha">Senha:</string>
+    <string name="Login_">Login:</string>
+    <string name="email">E-mail</string>
+    <string name="Cadastrar">Cadastrar</string>
+</resources>
