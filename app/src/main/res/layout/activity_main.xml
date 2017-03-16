@@ -12,10 +12,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="17dp"
+        android:layout_marginTop="17dp"
         android:background="@drawable/casa"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -24,57 +24,41 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="49dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:editable="false"
-        android:ems="10"
-        android:enabled="false"
-        android:inputType="textMultiLine"
-        android:scrollbarStyle="insideOverlay"
-        android:text="@string/title_home"
-        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignEnd="@+id/et_Login"
         android:layout_alignTop="@+id/imageView2"
         android:layout_toEndOf="@+id/imageView2"
-        android:layout_marginStart="15dp"
-        android:layout_alignBottom="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/tv_Login"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_weight="0.63"
+        android:cursorVisible="true"
+        android:editable="false"
+        android:elevation="0dp"
         android:enabled="false"
-        android:gravity="center"
-        android:text="@string/Login_"
-        app:layout_constraintBottom_toTopOf="@+id/et_SenhaLogin"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_Senha"
-        app:layout_constraintRight_toRightOf="@+id/tv_Senha"
-        app:layout_constraintTop_toTopOf="@+id/et_DigitarLogin"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:layout_above="@+id/et_SenhaLogin"
-        android:layout_toStartOf="@+id/et_Login"
-        android:layout_marginEnd="17dp" />
+        android:inputType="textMultiLine"
+        android:nestedScrollingEnabled="false"
+        android:scrollbarStyle="insideOverlay"
+        android:text="@string/Subtitle_home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
 
     <EditText
         android:id="@+id/et_Login"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_alignTop="@+id/tv_Login"
-        android:layout_toEndOf="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="88dp"
         android:layout_weight="1"
         android:ems="10"
+        android:hint="Digite seu login"
         android:inputType="textEmailAddress"
-        android:selectAllOnFocus="false"
+        android:selectAllOnFocus="true"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/et_SenhaLogin"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintBottom_creator="1"
@@ -82,36 +66,18 @@
 
     <EditText
         android:id="@+id/et_SenhaLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:ems="10"
+        android:hint="Digite sua senha"
         android:inputType="textPassword"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_Senha"
-        app:layout_constraintLeft_toLeftOf="@+id/et_DigitarLogin"
-        app:layout_constraintRight_toRightOf="@+id/et_DigitarLogin"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        android:layout_alignTop="@+id/tv_Senha"
-        android:layout_alignStart="@+id/et_Login" />
-
-    <TextView
-        android:id="@+id/tv_Senha"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:enabled="false"
-        android:gravity="center"
-        android:text="@string/Senha"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/et_SenhaLogin"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/tv_Login" />
+        android:layout_below="@+id/et_Login"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
 
     <Button
         android:id="@+id/bt_Login"
@@ -126,16 +92,16 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
-        android:layout_marginStart="37dp"
-        android:layout_below="@+id/tv_Senha"
-        android:layout_alignStart="@+id/editText"
-        android:layout_marginTop="29dp" />
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/et_SenhaLogin"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/bt_Cadastrar"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="240dp"
+        android:layout_width="200dp"
         android:layout_height="48dp"
+        android:gravity="center_vertical|center"
         android:text="@string/cadastro"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="12sp"
@@ -145,8 +111,8 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
         android:layout_below="@+id/bt_Login"
-        android:layout_alignEnd="@+id/et_SenhaLogin"
-        android:layout_marginTop="45dp" /><![CDATA[
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" /><![CDATA[
 
 
 

@@ -7,71 +7,46 @@
     android:orientation="vertical"
     tools:context="i_home.studio.com.i_home.CadastarActivity">
 
-    <TextView
-        android:id="@+id/tv_Email_Cadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignStart="@+id/tv_Senha_Cadastro"
-        android:layout_alignTop="@+id/et_email_Cadastro"
-        android:layout_weight="0.63"
-        android:enabled="false"
-        android:gravity="center"
-        android:text="@string/email"
-        app:layout_constraintBottom_toTopOf="@+id/et_SenhaLogin"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_Senha"
-        app:layout_constraintRight_toRightOf="@+id/tv_Senha"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Digite seu nome."
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/et_email_Cadastro"
-        android:layout_width="280dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="9dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="41dp"
         android:ems="10"
+        android:hint="Digite seu email. "
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="false"
         app:layout_constraintBottom_toTopOf="@+id/et_SenhaLogin"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintRight_creator="1" />
-
-    <TextView
-        android:id="@+id/tv_Senha_Cadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:enabled="false"
-        android:gravity="center"
-        android:text="@string/Senha"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/et_SenhaLogin"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="11dp"
-        android:layout_alignTop="@+id/et_Senha_Cadastro"
-        android:layout_toStartOf="@+id/et_Senha_Cadastro" />
+        android:layout_below="@+id/et_nome"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/et_Senha_Cadastro"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_alignStart="@+id/et_email_Cadastro"
-        android:layout_below="@+id/et_email_Cadastro"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
+        android:hint="Digite sua senha."
         android:inputType="textPassword"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_Senha"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        android:layout_below="@+id/et_email_Cadastro"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/bt_Cadastro"
@@ -80,7 +55,8 @@
         android:layout_height="40dp"
         android:layout_below="@+id/et_Senha_Cadastro"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="49dp"
+        android:onClick="ca"
         android:text="@string/Cadastrar"
         android:textColor="@android:color/holo_blue_light"
         android:textSize="12sp"
