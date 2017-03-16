@@ -14,19 +14,30 @@ public class Quarto extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quarto);
 
-       /* private final ImageView botao_Lampada;
+        final ImageView botao_Lampada;
 
         botao_Lampada = (ImageView) findViewById(R.id.bt_lampada);
+        botao_Lampada.setTag("Desligado");
 
         botao_Lampada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                /*botao_Lampada.setBac);
+
+                if (botao_Lampada.getTag()=="Ligado"){
+
+                    botao_Lampada.setImageResource(R.drawable.icone_apagado);
+                    botao_Lampada.setTag("Desligado");
+
+                }else{
+
+                    botao_Lampada.setImageResource(R.drawable.icone);
+                    botao_Lampada.setTag("Ligado");
+
+                }
 
             }
-        }); */
-
+        });
 
     }
 }

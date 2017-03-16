@@ -3,6 +3,7 @@ package i_home.studio.com.i_home;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,19 +36,25 @@ public class CadastarActivity extends Activity {
         nome = (EditText) findViewById(R.id.et_nome);
         email = (EditText) findViewById(R.id.et_email_Cadastro);
         senha = (EditText) findViewById(R.id.et_Senha_Cadastro);
-
-        botaoCadastrar = (Button) findViewById(R.id.bt_Cadastrar);
+        botaoCadastrar = (Button) findViewById(R.id.bt_Cadastro);
 
 
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                usuario = new Usuario();
-                usuario.setNome(nome.getText().toString());
-                usuario.setNome(email.getText().toString());
-                usuario.setNome(senha.getText().toString());
-                cadastrarUsuario();
+                if(TextUtils.isEmpty(nome.getText()) | TextUtils.isEmpty(senha.getText())){
+
+                    Toast.makeText(CadastarActivity.this,"Favor informar os dados corretamente", Toast.LENGTH_LONG).show();
+
+                }else{
+
+                    usuario = new Usuario();
+                    usuario.setNome(nome.getText().toString());
+                    usuario.setEmail(email.getText().toString());
+                    usuario.setSenha(senha.getText().toString());
+                    cadastrarUsuario();
+                }
 
             }
         });
